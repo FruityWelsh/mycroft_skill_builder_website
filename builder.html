@@ -42,7 +42,22 @@ input {
 
 </style>
 <!doctype html>
-<html lang='en-US' style='height: 100%;'>
+<html lang='en-US'  style='height: 100%;'>
+    <head>
+        <meta charset="utf-8"/>
+    </head>
+    <script>
+        function add_skill_tr() {
+            var skill_table = document.getElementById('skill_table')
+            last_row = skill_table.rows[ skill_table.rows.length - 1 ]
+            var row = skill_table.insertRow();
+            first_row = skill_table.rows[0]
+            for (var count = 0, col; col = last_row.cells[count]; count++) {
+                cell = row.insertCell();
+                cell.innerHTML = "Users Says: <input type='text' id='user_ask' name='user_ask' onchange='add_skill_tr()'>";
+            }                     
+        }
+    </script>
     <body>
         <div class='container' style="padding:30px">
           <section name='form' id='form'>
@@ -61,21 +76,22 @@ input {
                      <th><h2>Mycroft Actions</h2></th>
                   </tr>
                </thead>
-               <tbody>
+               <tbody id='skill_table'>
                   <tr>
-                      <td style="border: 1px solid; border-radius: 4px;">User Says: <strong>Hey Mycroft</strong></td>
-                      <td></td>                 
+                        <td style="border: 1px solid; border-radius: 4px;">User Says: <strong>Hey Mycroft</strong></td>
+                        <td> </td>                 
                   </tr>
                   <tr>
-                      <td> </td>
-                      <td style="border: 1px solid; border-radius: 4px;">*Activates*</td>
+                        <td> </td>
+                        <td style="border: 1px solid; border-radius: 4px;">*Activates*</td>
                   <tr>
                   <tr>
-                      <td> </td>
-                      <td style="border: 1px solid; border-radius: 4px;">*Beeps*</td>
+                        <td> </td>
+                        <td style="border: 1px solid; border-radius: 4px;">*Beeps*</td>
                   <tr>
-                      <td style="border: 1px solid; border-radius: 4px;">Users Says:<input type='text' id='user_ask' name='user_ask'></td>
-                  </tr>
+                        <td style="border: 1px solid; border-radius: 4px;">Users Says: <input type='text' id='user_ask' name='user_ask' onchange='add_skill_tr()'></td>
+                        <td> </td>
+                    </tr>
                </tbody>
            </table>
            </section>
