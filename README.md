@@ -15,18 +15,19 @@ This is a table that is built in a message response way. So you can create a con
 
 Example:
 <pre>
-User       Mycroft                      Weather_service.com
+User                  Mycroft                      Weather_service.com
 Hey mycroft
-           *Activates
-           *Beeps
+                      *Activates
+                      *Beeps
 Whats the weather like?
-           Let me see
-           *Run weather_api_check_current
-                                        Returns JSON for weather
-           *Speak weather_json.value
-           *Wait for talking
-           Is there anything else you like?
-           *if ~yes proccess else exit
+                      Let me see
+                      *Checks settings for API
+                      *Run weather_api_check_current
+                                                   Returns JSON for weather
+                      *Speak weather_json.value
+                      *Wait for talking
+                      Is there anything else you like?
+                      *if ~yes proccess else exit
 </pre>
 
 Generate Code page:
