@@ -29,6 +29,16 @@ table {
       min-height: 70%;
 }
 
+.parallax {
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} 
 
 textarea {
    width: 60%;
@@ -60,41 +70,45 @@ input {
     </script>
     <body>
         <div class='container' style="padding:30px">
-          <section name='form' id='form'>
-          <form>
-              <label for='SkillName'><h1>Name of Skill</h1></label>
-              <input type='text' id='SkillName' name='SkillName'>
-              <label for='description'><h1>Description</h1></label>
-              <textarea class='test' id="description" name="description" placeholder="Describe your skill here..."></textarea>
-           </form>
-           </section>
-           <section name='skill_builder'>
-           <table>
-               <thead>
-                  <tr>
-                     <th><h2>User Inputs</h2></th>
-                     <th><h2>Mycroft Actions</h2></th>
-                  </tr>
-               </thead>
-               <tbody id='skill_table'>
-                  <tr>
-                        <td style="border: 1px solid; border-radius: 4px;">User Says: <strong>Hey Mycroft</strong></td>
-                        <td> </td>                 
-                  </tr>
-                  <tr>
-                        <td> </td>
-                        <td style="border: 1px solid; border-radius: 4px;">*Activates*</td>
-                  <tr>
-                  <tr>
-                        <td> </td>
-                        <td style="border: 1px solid; border-radius: 4px;">*Beeps*</td>
-                  <tr>
-                        <td style="border: 1px solid; border-radius: 4px;">Users Says: <input type='text' id='user_ask' name='user_ask' onchange='add_skill_tr()'></td>
-                        <td> </td>
-                    </tr>
-               </tbody>
-           </table>
-           </section>
+            <div name='form' id='form'>
+                <form>
+                    <label for='SkillName'><h1>Name of Skill</h1></label>
+                    <input type='text' id='SkillName' name='SkillName'>
+                    <label for='description'><h1>Description</h1></label>
+                    <textarea class='test' id="description" name="description" placeholder="Describe your skill here..."></textarea>
+                    <br>
+                    <input type="button" value="Submit" onClick="document.getElementById('skill_builder').scrollIntoView();" />
+                </form>
+            </div>
+            <div class="parallax"></div>
+            <div name='skill_builder' id='skill_builder' style="padding:30px">
+                <table>
+                    <thead>
+                        <tr>
+                            <th><h2>User Inputs</h2></th>
+                            <th><h2>Mycroft Actions</h2></th>
+                        </tr>
+                    </thead>
+                    <tbody id='skill_table'>
+                        <tr>
+                            <td style="border: 1px solid; border-radius: 4px;">User Says: <strong>Hey Mycroft</strong></td>
+                            <td> </td>                 
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td style="border: 1px solid; border-radius: 4px;">*Activates*</td>
+                        <tr>
+                        <tr>
+                            <td> </td>
+                            <td style="border: 1px solid; border-radius: 4px;">*Beeps*</td>
+                        <tr>
+                            <td style="border: 1px solid; border-radius: 4px;">Users Says: <input type='text' id='user_ask' name='user_ask' onchange='add_skill_tr()'></td>
+                            <td> </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="parallax"></div>
+            </div>
            
         </div>
     </body>
