@@ -1,0 +1,87 @@
+<style type='text/css'>
+body {
+    text-align: center;
+    position: relative; 
+    min-height: 100%;
+    top: 0px;
+}
+
+form {
+    display: inline-block;
+    min-height: 95%;
+    min-width: 95%;
+}
+
+textarea, input {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+table {
+      border: 1px solid;
+      border-radius: 4px;
+      display: inline-block;
+      min-width: 60%;
+      min-height: 70%;
+}
+
+
+textarea {
+   width: 60%;
+   height: 20%;
+}
+
+input {
+   width: 30%;
+   height: 5%;
+}
+
+</style>
+<!doctype html>
+<html lang='en-US' style='height: 100%;'>
+    <body>
+        <div class='container' style="padding:30px">
+          <section name='form' id='form'>
+          <form>
+              <label for='SkillName'><h1>Name of Skill</h1></label>
+              <input type='text' id='SkillName' name='SkillName'>
+              <label for='description'><h1>Description</h1></label>
+              <textarea class='test' id="description" name="description" placeholder="Describe your skill here..."></textarea>
+           </form>
+           </section>
+           <section name='skill_builder'>
+           <table>
+               <thead>
+                  <tr>
+                     <th><h2>User Inputs</h2></th>
+                     <th><h2>Mycroft Actions</h2></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                      <td style="border: 1px solid; border-radius: 4px;">User Says: <strong>Hey Mycroft</strong></td>
+                      <td></td>                 
+                  </tr>
+                  <tr>
+                      <td> </td>
+                      <td style="border: 1px solid; border-radius: 4px;">*Activates*</td>
+                  <tr>
+                  <tr>
+                      <td> </td>
+                      <td style="border: 1px solid; border-radius: 4px;">*Beeps*</td>
+                  <tr>
+                      <td style="border: 1px solid; border-radius: 4px;">Users Says:<input type='text' id='user_ask' name='user_ask'></td>
+                  </tr>
+               </tbody>
+           </table>
+           </section>
+           
+        </div>
+    </body>
+</html>
+
+
